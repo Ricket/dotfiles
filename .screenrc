@@ -6,3 +6,5 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 vbell on
 autodetach on
 startup_message off
+
+term screen-256color
