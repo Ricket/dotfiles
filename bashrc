@@ -7,7 +7,7 @@ pathadd() {
 }
 
 alias ls='ls --color=auto'
-alias ll='ls -alF'
+alias ll='ls -lF'
 alias la='ls -A'
 alias l='ls -CF'
 
