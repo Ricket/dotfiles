@@ -75,5 +75,5 @@ set backupdir-=.
 set directory-=.
 
 " CoffeeScript: indent with 2 spaces
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 expandtab
+au BufNewFile,BufReadPost {*.coffee,Cakefile} setl shiftwidth=2 tabstop=2 expandtab
 
