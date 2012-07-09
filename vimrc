@@ -29,8 +29,6 @@ set laststatus=2
 set showmatch
 " as you type your search, highlight matches
 set incsearch
-" underline search matches after search is performed
-set hlsearch
 " ignore case in search except if contains uppercase letters
 set ignorecase smartcase
 " highlight cursor line
