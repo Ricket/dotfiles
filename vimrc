@@ -11,6 +11,12 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " ,, will switch between two files
 nnoremap <leader><leader> <c-^>
 
+" ,l will toggle `set list` (show invisibles)
+nmap <leader>l :set list!<cr>
+
+" Use better symbols for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
 " remember more commands and search history
 set history=10000
 
