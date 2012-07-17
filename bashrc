@@ -11,6 +11,10 @@ alias ll='ls -lF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# This prevents vim from clobbering one screen height worth of buffer when
+# you run vim in GNU screen.
+alias vim='clear; vim'
+
 # Mac OS X specific
 alias gateway="netstat -nr | grep '^default'"
 
