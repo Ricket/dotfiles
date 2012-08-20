@@ -15,7 +15,8 @@ nnoremap <leader><leader> <c-^>
 nmap <leader>l :set list!<cr>
 
 " Use better symbols for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+" Commented because the triangle char does not work on all systems.
+"set listchars=tab:▸\ ,eol:¬
 
 " remember more commands and search history
 set history=10000
