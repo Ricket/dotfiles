@@ -14,6 +14,21 @@ nnoremap <leader><leader> <c-^>
 " ,l will toggle `set list` (show invisibles)
 nmap <leader>l :set list!<cr>
 
+" Left/right arrow keys will move lines or selections around (in normal and
+" visual modes). This tip was found at:
+" http://codingfearlessly.com/2012/08/21/vim-putting-arrows-to-use/
+nmap <Left> <<
+nmap <Right> >>
+vmap <Left> <gv
+vmap <Right> >gv
+
+" Up/down arrow keys move among visible lines instead of actual lines. Found
+" in a comment in Hacker News.
+nmap <silent> <Up> gk
+nmap <silent> <Down> gj
+imap <silent> <Up> <C-o>gk
+imap <silent> <Down> <C-o>gj
+
 " Use better symbols for tabstops and EOLs
 " Commented because the triangle char does not work on all systems.
 "set listchars=tab:▸\ ,eol:¬
@@ -86,4 +101,9 @@ au BufNewFile,BufReadPost {*.coffee,Cakefile} setl shiftwidth=2 tabstop=2 expand
 
 " thpl: act as perl
 au BufNewFile,BufReadPost *.thpl set filetype=perl
+
+" Command-T options
+let g:CommandTMaxFiles=40000
+let g:CommandTMaxDepth=20
+let g:CommandTMaxCachedDirectories=5
 
