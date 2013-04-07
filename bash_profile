@@ -1,8 +1,11 @@
 # .bash_profile
-# This file is executed when SSHing somewhere but not when opening screen
+# This file is executed in login shells but not when opening screen
 # Screen runs .bashrc.
 
 if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
 fi
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
