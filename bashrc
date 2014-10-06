@@ -16,6 +16,7 @@ alias ls='ls --color=auto'
 alias ll='ls -lF'
 alias la='ls -A'
 alias l='ls -CF'
+alias sl='ls'
 
 # Common typo of mine
 alias Grep='grep'
