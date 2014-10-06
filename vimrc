@@ -71,7 +71,7 @@ set scrolloff=3
 
 " show column 80
 if exists("&colorcolumn")
-set colorcolumn=80
+set colorcolumn=80,120
 endif
 
 " allow backspacing over everything in insert mode
@@ -106,4 +106,5 @@ au BufNewFile,BufReadPost *.thpl set filetype=perl
 let g:CommandTMaxFiles=40000
 let g:CommandTMaxDepth=20
 let g:CommandTMaxCachedDirectories=5
+set wildignore+=.git,node_modules
 
