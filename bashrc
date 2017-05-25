@@ -28,7 +28,9 @@ alias vim='clear; vim'
 # Mac OS X specific
 alias gateway="netstat -nr | grep '^default'"
 
-export PS1="[\[\033[32m\]\w\[\033[0m\]]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
+# https://serverfault.com/a/425657
+hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print 30 + (total % 6)}')
+export PS1="[\[\033[32m\]\w\[\033[0m\]]\n\[\033[1;${hostnamecolor}m\]\u@\h\[\033[1;33m\]-> \[\033[0m\]"
 
 export EDITOR=vim
 export SVN_EDITOR=vim
