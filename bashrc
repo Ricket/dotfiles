@@ -33,6 +33,12 @@ export PS1="[\[\033[32m\]\w\[\033[0m\]]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033
 export EDITOR=vim
 export SVN_EDITOR=vim
 
+# Add 'v' command. Pipe to this when you want to open some text into vim.
+# http://vi.stackexchange.com/a/2726
+v() {
+    vim -c ScratchBuffer -
+}
+
 if [ -f ~/.bashrc_custom ]; then
 	source ~/.bashrc_custom
 fi

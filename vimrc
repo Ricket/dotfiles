@@ -108,3 +108,6 @@ let g:CommandTMaxDepth=20
 let g:CommandTMaxCachedDirectories=5
 set wildignore+=.git,node_modules
 
+":ScratchBuffer makes current buffer disposable
+command! ScratchBuffer setlocal buftype=nofile bufhidden=hide noswapfile
+
