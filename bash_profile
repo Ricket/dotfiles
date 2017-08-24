@@ -9,3 +9,6 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+if [ -f ~/.bash_profile_custom ]; then
+	source ~/.bash_profile_custom
+fi
