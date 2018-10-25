@@ -6,8 +6,11 @@ if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
 fi
 
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Install bash completion, if it exists
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 if [ -f ~/.bash_profile_custom ]; then
 	source ~/.bash_profile_custom

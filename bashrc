@@ -1,5 +1,8 @@
 # .bashrc
 
+# Do not execute bashrc if we are in a non-interactive shell (e.g. scp)
+[ -z "$PS1" ] && return
+
 pathadd() {
     if [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$PATH:$1"
@@ -27,6 +30,8 @@ alias vim='clear; vim'
 
 # Mac OS X specific
 alias gateway="netstat -nr | grep '^default'"
+# Ignore DS_Store in bash tab completion
+export FIGNORE=$FIGNORE:DS_Store
 
 # https://serverfault.com/a/425657
 hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print 30 + (total % 6)}')
