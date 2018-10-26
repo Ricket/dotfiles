@@ -1,5 +1,10 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+" Make sure to use single quotes
+Plug 'wincent/command-t'
+Plug 'altercation/vim-colors-solarized'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'iloginow/vim-stylus'
+call plug#end()
 
 set nocompatible
 
