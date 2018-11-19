@@ -1,9 +1,11 @@
 call plug#begin('~/.vim/plugged')
 " Make sure to use single quotes
-Plug 'wincent/command-t'
 Plug 'altercation/vim-colors-solarized'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'wincent/command-t'
 Plug 'iloginow/vim-stylus'
+Plug 'mustache/vim-mustache-handlebars'
 call plug#end()
 
 set nocompatible
