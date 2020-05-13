@@ -2,6 +2,10 @@
 # This file is executed in login shells but not when opening screen
 # Screen runs .bashrc.
 
+# Terminal colors
+export CLICOLOR=1
+export TERM=xterm-256color
+
 if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
 fi
@@ -15,3 +19,4 @@ fi
 if [ -f ~/.bash_profile_custom ]; then
 	source ~/.bash_profile_custom
 fi
+
