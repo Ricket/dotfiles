@@ -1,4 +1,10 @@
 # .bashrc
+BASHRC_DEBUG=0
+bashrc_echo() {
+    [ "$BASHRC_DEBUG" -eq "1" ] && echo "$@"
+}
+
+bashrc_echo "Entered bashrc"
 
 # Do not execute bashrc if we are in a non-interactive shell (e.g. scp)
 [ -z "$PS1" ] && return
@@ -49,4 +55,8 @@ v() {
 if [ -f ~/.bashrc_custom ]; then
 	source ~/.bashrc_custom
 fi
+bashrc_echo "Sourced bashrc_custom"
+
+
+bashrc_echo "Exited bashrc"
 
