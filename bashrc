@@ -10,12 +10,14 @@ bashrc_echo "Entered bashrc"
 [ -z "$PS1" ] && return
 
 pathadd() {
+    [ ! -d "$1" ] && echo "pathadd nonexistent dir: $1"
     if [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$PATH:$1"
     fi
 }
 
 pathprepend() {
+    [ ! -d "$1" ] && echo "pathprepend nonexistent dir: $1"
     if [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$1:$PATH"
     fi
