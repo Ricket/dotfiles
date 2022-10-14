@@ -106,6 +106,9 @@ set directory-=.
 " CoffeeScript: indent with 2 spaces
 au BufNewFile,BufReadPost {*.coffee,Cakefile} setl shiftwidth=2 tabstop=2 expandtab
 
+" docker-compose.yml: indent with 2 spaces
+au BufNewFile,BufReadPost {docker-compose.yml} setl shiftwidth=2 tabstop=2 expandtab
+
 " thpl: act as perl
 au BufNewFile,BufReadPost *.thpl set filetype=perl
 
