@@ -54,6 +54,10 @@ v() {
     vim -c ScratchBuffer -
 }
 
+# Install bash completion, if it exists
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion && bashrc_echo "Installed bash completion"
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh" && bashrc_echo "Installed bash completion"
+
 if [ -f ~/.bashrc_custom ]; then
 	source ~/.bashrc_custom
 fi
