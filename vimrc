@@ -46,7 +46,7 @@ set history=10000
 syntax on
 filetype plugin indent on
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 set expandtab
 set tabstop=4
