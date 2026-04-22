@@ -45,6 +45,9 @@ export FIGNORE=$FIGNORE:DS_Store
 hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print 30 + (total % 6)}')
 export PS1="[\[\033[32m\]\w\[\033[0m\]]\n\[\033[1;${hostnamecolor}m\]\u@\h\[\033[1;33m\]-> \[\033[0m\]"
 
+# tmux shortcut
+alias t='tmux attach -d -t main || tmux new -s main'
+
 export EDITOR=vim
 export SVN_EDITOR=vim
 
